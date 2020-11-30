@@ -1,0 +1,38 @@
+eval $(gdircolors)
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.tuna.tsinghua.edu.cn/homebrew-bottles
+
+alias ....='cd ../../..'
+alias ...='cd ../..'
+alias ..='cd ..'
+alias cp='cp -ai'
+alias ga='git add'
+alias gc='git commit -m'
+alias gcl='git clone'
+alias gd='git diff --color HEAD'
+alias gl='git pull'
+alias gp='git push'
+alias gs='git status'
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -l'
+alias ls='/usr/local/bin/gls -Fhv --color --group-directories-first'
+alias mv='mv -i'
+alias q='exit'
+alias rm='rm -iv'
+alias sed='/usr/local/bin/gsed'
+alias vi='nvim'
+alias vim='nvim'
+
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+
+autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*:default' list-colors "${(s.:.)LS_COLORS}"
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#56b6c2,bold'
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
