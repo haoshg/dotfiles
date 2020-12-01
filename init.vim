@@ -1,3 +1,4 @@
+" vim: set foldmethod=marker foldlevel=0 nomodeline:
 " vim-plug {{{
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -74,6 +75,7 @@ nnoremap <silent> <Space>y :<C-u>CocList -A --normal yank<CR>
 " folding
 " indent {{{
 set copyindent
+set expandtab
 set shiftwidth=4
 set smartindent
 set softtabstop=4
@@ -95,12 +97,13 @@ vmap k gk
 " }}}
 " misc {{{
 set confirm
+set nostartofline
 set noswapfile
+set report=0
 set scrolloff=7
 set sidescrolloff=7
 " }}}
-" searhcing {{{
-set expandtab
+" searching {{{
 set ignorecase
 set smartcase
 " }}}
